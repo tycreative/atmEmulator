@@ -35,21 +35,6 @@ This software allows admins to
   - Update balance
   - Set minimum balance
 
-This software allows admins to
-  1. Manage ATM Cards
-    - Activate/deactivate
-    - Create/delete
-    - Change other details
-  2. Manage Accounts
-    - Create/delete
-    - Assign/deassign cards
-    - Change other details
-  3. Manage ATM Machines
-    - Activate/deactivate
-    - Create/delete
-    - Update balance
-    - Set minimum balance
-
 ## Emulation
 Starts with a location/machine selection page
 ![Welcome page](screenshots/welcome_page.png?raw=true)
