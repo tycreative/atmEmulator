@@ -1,0 +1,39 @@
+<section id="card" class="wrapper">
+    {% if card != None %}
+        <h3>Card Details</h3>
+
+        <div class="table-cell">
+            <p class="text-left">
+                <b>Card Number</b><br>{{ card.number }}
+                <br><br><br>
+                <b>Connected Account</b><br>{{ card.account }}
+                <br><br><br>
+                <b>Date Issued</b><br>{{ card.date_issued }}
+                <br><br><br>
+                <b>Status</b><br>
+                {% if card.status %}
+                    {% if card.expiry_date <= date %}
+                        <span class="red">Expired</span>
+                    {% else %}
+                        <span class="green">Active</span>
+                    {% endif %}
+                {% else %}
+                    <span class="red">Inactive</span>
+                {% endif %}
+            </p>
+        </div>
+
+        <div class="table-cell">
+            <p class="text-right">
+                <b>Card PIN</b><br>{{ card.pin }}
+                <br><br><br>
+                <b>Card Holder</b><br>{{ card.holder }}
+                <br><br><br>
+                <b>Expiring Date</b><br>{{ card.expiry_date }}
+            </p>
+        </div>
+    {% else %}
+        <p class="red">You don't have permission to view this page.</p>
+    {% endif %}
+</section>
+

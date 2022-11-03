@@ -1,0 +1,28 @@
+<section id="form">
+	<form method="POST">
+		{% csrf_token %}
+
+		<h1>{{ title }}</h1>
+
+		{% if subtitle != None %}
+			<h3>{{ subtitle }}</h3>
+		{% endif %}
+			
+		{% for error in form.non_field_errors %}
+			<p class="red">{{ error }}</p>
+		{% endfor %}
+
+		<fieldset class="text-left">
+			{% for field in form %}
+				{{ field.label_tag }}
+				{{ field }}
+				{% for error in field.errors %}
+					<span class="red">{{ error }}</span>
+				{% endfor %}
+			{% endfor %}
+		</fieldset>
+				
+		<button type="submit" class="action">{{ button }}</button>
+	</form>
+</section>
+

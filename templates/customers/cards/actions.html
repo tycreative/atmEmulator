@@ -1,0 +1,13 @@
+<section id="actions" style="width: 35%;">
+    <h3>Quick Actions</h3>
+
+    {% if card != None %}
+        <a class="action" href="{% url 'customers:changePIN' number=card.number %}">Change Card PIN</a>
+        <a class="action" href="{% url 'customers:account' number=card.account.number %}">View Account Details</a>
+        <a class="action" href="{% url 'customers:transfer' %}">Start a Transfer</a>
+        <a class="action" href="{% url 'customers:deposit' %}">Make a Deposit</a>
+        <a class="action" href="{% url 'customers:withdrawal' %}">Make a Withdrawal</a>
+    {% else %}
+        <p>No Quick Actions Available</p>
+    {% endif %}
+</section>

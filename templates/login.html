@@ -1,0 +1,59 @@
+{% extends 'base/core.html' %}
+
+{% load static %}
+
+{% block content %}
+    <form id="welcome" method="POST" style="max-width: 100%;">
+        {% csrf_token %}
+
+        <section id="locations" style="background-image: url('{% static "background.png" %}');">
+            {% for machine in machines %}
+                {% if machine.status and machine.balance > machine.minimum %}
+                    <div class="text-left" style="position: absolute; top: {{ machine.y }}px; left: {{ machine.x }}px;">
+                        {% if machine == selected %}
+                            <input type="radio" class="radio" name="machine" value="{{ machine.id }}" checked />
+                        {% else %}
+                            <input type="radio" class="radio" name="machine" value="{{ machine.id }}" />
+                        {% endif %}
+                        <label for="machine"><b>Funds: ${{ machine.balance }}</b><br>{{ machine.address }}</label>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </section>
+    
+        <section id="login" style="display: {{ display }}";>
+            <div style="border: 2px black; border-style: solid none;">
+                <span id="close">X</span>
+
+                <h1>Welcome</h1>
+                <h3>Please Sign In</h3>
+                        
+                {% for error in form.non_field_errors %}
+                    <p class="red">{{ error }}</p>
+                {% endfor %}
+        
+                <fieldset class="text-left">
+                    {% for field in form %}
+                        {{ field.label_tag }}
+                        {{ field }}
+                        {% for error in field.errors %}
+                            <span class="red">{{ error }}</span>
+                        {% endfor %}
+                    {% endfor %}
+                </fieldset>
+                            
+                <button type="submit" class="action">Login</button>
+            </div>
+        </section>
+    </form>
+
+    <script type="text/javascript">
+        $("input").click( function() {
+            $("#login").fadeIn();
+        });
+
+        $("#close").click( function() {
+            $("#login").fadeOut();
+        });
+    </script>
+{% endblock %}

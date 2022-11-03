@@ -1,0 +1,77 @@
+<form method="POST" id="transactions" style="max-width: 100%;">
+    {% csrf_token %}
+
+    <table id="transactions-full" class="text-left">
+        <tr>
+            <th id="machine-col">
+                <input class="up" type="radio" name="sort" value="-machine">
+                <label for="sort">Sort</label>
+                <input class="down" type="radio" name="sort" value="machine">
+            </th>
+
+            <th id="account-col">
+                <input class="up" type="radio" name="sort" value="-account">
+                <label for="sort">Sort</label>
+                <input class="down" type="radio" name="sort" value="account">
+            </th>
+
+            <th id="type-col">
+                <input class="up" type="radio" name="sort" value="-category">
+                <label for="sort">Sort</label>
+                <input class="down" type="radio" name="sort" value="category">
+            </th>
+
+            <th id="amount-col">
+                <input class="up" type="radio" name="sort" value="-amount">
+                <label for="sort">Sort</label>
+                <input class="down" type="radio" name="sort" value="amount">
+            </th>
+
+            <th id="date-col">
+                <input class="up" type="radio" name="sort" value="-date_time">
+                <label for="sort">Sort</label>
+                <input class="down" type="radio" name="sort" value="date_time">
+            </th>
+        </tr>
+            
+        <tr class="gray">
+            <th>Machine</th>
+            <th>Account</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+            
+        {% for tr in transactions %}
+            {% if forloop.counter|divisibleby:2 %}
+                <tr class="gray">
+            {% else %}
+                <tr class="white">
+            {% endif %}
+                <td>@{{ tr.machine.id }}</td>
+                <td>{{ tr.account }}</td>
+                <td>{{ tr.category }}</td>
+                {% if tr.positive %}
+                    <td class="green">+${{ tr.amount }}</td>
+                {% else %}
+                    <td class="red">-${{ tr.amount }}</td>
+                {% endif %}
+                <td>{{ tr.date_time }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <div class="wrapper">
+        {% for page in pages %}
+            <a href="{% url 'customers:transactions' page=page %}" class="action" style="display: inline-block;">{{ page }}</a>
+        {% endfor %}
+    </div>
+</form>
+
+<script>
+    $(document).ready( function() {
+        $("input").change( function() {
+            $("form").submit();
+        });
+    });
+</script>

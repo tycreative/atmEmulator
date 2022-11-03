@@ -1,0 +1,19 @@
+<div class="wrapper">    
+    <table id="menu">
+        <tr>
+            <th><a href="{% url 'customers:transfers' 'all' %}">Transfers</a></th>
+            <th><a href="{% url 'customers:deposits' 'all' %}">Deposits</a></th>
+            <th><a href="{% url 'customers:dashboard' %}">Home</a></th>
+            <th><a href="{% url 'customers:withdrawals' 'all' %}">Withdrawals</a></th>
+            <th><a href="{% url 'customers:transactions' page=1 %}">Transactions</a></th>
+        </tr>
+
+        <tr>
+            <td><a href="{% url 'customers:transfer' %}">Start a Transfer</a></td>
+            <td><a href="{% url 'customers:deposit' %}">Make a Deposit</a></td>
+            <td><a href="{% url 'customers:logout' %}">Logout</a></td>
+            <td><a href="{% url 'customers:withdrawal' %}">Make a Withdrawal</a></td>
+            <td><a href="{% url 'customers:transactions' page=1 %}">Transaction History</a></td>
+        </tr>
+    </table>
+</div>

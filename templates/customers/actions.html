@@ -1,0 +1,8 @@
+<section id="actions" style="width: 26%;">
+    <h3>Quick Actions</h3>
+
+    <a class="action" href="{% url 'customers:transfer' %}">Start a Transfer</a>
+    <a class="action" href="{% url 'customers:deposit' %}">Make a Deposit</a>
+    <a class="action" href="{% url 'customers:withdrawal' %}">Make a Withdrawal</a>
+    <a class="action" href="{% url 'customers:transactions' page=1 %}">View Transaction History</a>
+</section>

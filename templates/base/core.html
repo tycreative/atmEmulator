@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no" />
+		<link rel="stylesheet" type="text/css" href="{% static 'external.css' %}" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript"> 
+			$(document).ready( function() {
+			  $('#messages').delay(5000).fadeOut();
+			});
+		</script>
+		
+		<title>Columbus Regional Banking</title>
+	</head>
+	
+	<body>
+		{% include 'base/header.html' %}
+	
+		<div id="content">
+			{% block content %}
+		
+			{% endblock %}
+		</div>
+
+		{% include 'base/footer.html' %}
+	</body>
+</html>

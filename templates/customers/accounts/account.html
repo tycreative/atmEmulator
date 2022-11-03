@@ -1,0 +1,28 @@
+<section id="account" class="wrapper">
+    {% if account != None %}
+        <h3>Account Details</h3>
+
+        <div class="table-cell">
+            <p class="text-left">
+                <b>Account Number</b><br>{{ account.number }}
+                <br><br><br>
+                <b>Name on Account</b><br>{{ request.user.first_name }} {{ request.user.last_name }}
+                <br><br><br>
+                <b>Balance</b><br>${{ account.balance }}
+            </p>
+        </div>
+
+        <div class="table-cell">
+            <p class="text-right">
+                <b>Account Name</b><br>{{ account.name }}
+                <br><br><br>
+                <b>Phone Number</b><br>{{ account.phone_number }}
+                <br><br><br>
+                <b>Cards Connected</b><br>{{ cards }}
+            </p>
+        </div>
+    {% else %}
+        <p class="red">You don't have permission to view this page.</p>
+    {% endif %}
+</section>
+

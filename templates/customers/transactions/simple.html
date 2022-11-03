@@ -1,0 +1,33 @@
+<section id="transactions" class="text-left">
+    <h3>Recent {{ type|capfirst }}</h3><br>
+
+    {% if transactions.count == 0 %}
+        <p>No recent {{ type }} to show.</p>
+    {% else %}
+        <table>
+            <tr>
+                <th>Date & Time</th>
+                <th>Machine</th>
+                <th>Account</th>
+                <th>Amount</th>
+            </tr>
+
+            {% for tr in transactions %}
+                {% if forloop.counter|divisibleby:2 %}
+                    <tr class="gray">
+                {% else %}
+                    <tr class="white">
+                {% endif %}
+                        <td>{{ tr.date_time }}</td>
+                        <td>@{{ tr.machine.id }}</td>
+                        <td>#{{ tr.account.number }}</td>
+                        {% if tr.positive %}
+                            <td class="green">+${{ tr.amount }}</td>
+                        {% else %}
+                            <td class="red">-${{ tr.amount }}</td>
+                        {% endif %}
+                    </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</section>

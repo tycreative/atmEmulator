@@ -1,0 +1,42 @@
+<nav id="navigation" class="wrapper">
+
+    <a href="{% url 'customers:transfers' 'all' %}">
+        {% if "transfer" in request.path %}
+            <span class="selected">Transfers</span>
+        {% else %}
+            Transfers
+        {% endif %}
+    </a>
+
+    <a href="{% url 'customers:deposits' 'all' %}">
+        {% if "deposit" in request.path %}
+            <span class="selected">Deposits</span>
+        {% else %}
+            Deposits
+        {% endif %}
+    </a>
+
+    <a href="{% url 'customers:dashboard' %}">
+        {% if "dashboard" in request.path %}
+            <span class="selected">Home</span>
+        {% else %}
+            Home
+        {% endif %}
+    </a>
+
+    <a href="{% url 'customers:withdrawals' 'all' %}">
+        {% if "withdrawal" in request.path %}
+            <span class="selected">Withdrawals</span>
+        {% else %}
+            Withdrawals
+        {% endif %}
+    </a>
+
+    <a href="{% url 'customers:transactions' page=1 %}">
+        {% if "transaction" in request.path %}
+            <span class="selected">Transactions</span>
+        {% else %}
+            Transactions
+        {% endif %}
+    </a>
+</nav>

@@ -1,0 +1,19 @@
+<section id="accounts">
+    <h3 class="text-left">Accounts</h3>
+
+	<div class="container">
+		{% for account in accounts %}
+			<div>
+				<a class="object" href="/{{ redirect }}/{{ account.number }}/">
+					<p class="left text-left">
+						<b>{{ account.name }}</b><br>{{ account.number }}
+					</p>
+
+					<p class="right text-right">
+						<b>Balance</b><br>${{ account.balance }}
+					</p>
+				</a>
+			</div>
+		{% endfor %}
+	</div>
+</section>

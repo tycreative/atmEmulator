@@ -1,0 +1,34 @@
+<section id="cards">
+    <h3 class="text-left">Cards</h3>
+
+	<div class="container">
+		{% for card in cards %}
+			<div>
+				<a class="object" href="/cards/{{ card.number }}/">
+					<p class="left text-left">
+						{% if card.holder == "" %}
+							<b>Card Holder</b>
+						{% else %}
+							<b>{{ card.holder }}</b>
+						{% endif %}
+							<br>{{ card.number }}
+					</p>
+
+					<p class="right text-right">
+						<b>Status</b><br>
+						
+						{% if card.status %}
+							{% if card.expiry_date <= date %}
+								<span class="red">Expired</span>
+							{% else %}
+								<span class="green">Active</span>
+							{% endif %}
+						{% else %}
+							<span class="red">Inactive</span>
+						{% endif %}
+					</p>
+				</a>
+			</div>
+		{% endfor %}
+	</div>
+</section>

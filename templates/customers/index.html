@@ -1,0 +1,33 @@
+{% extends 'base/core.html' %}
+
+{% block content %}
+	<main class="wrapper">
+		<header id="title">
+			<h1>{{ header }}</h1>
+		</header>
+		
+		{% include 'customers/navigation.html' %}
+
+		{% if messages %}
+			<section id="messages" role="alert">
+				{% for message in messages %}
+					<p>{{ message }}</p>
+				{% endfor %}
+			</section>
+		{% endif %}
+
+		{% if action %}
+			<a class="action" style="position: relative; display: inline-block; top: -5px; margin-bottom: -72px; border: 1px solid black;" href="/{{ redirect|slice:':-1' }}">
+				{{ action }}
+			</a>
+		{% endif %}
+		
+		<section id="index" class="wrapper">
+            {% for section in sections %}
+                {% include 'customers/'|add:section %}
+            {% endfor %}
+		</section>
+	</main>
+	
+	{% include 'customers/menu.html' %}
+{% endblock %}

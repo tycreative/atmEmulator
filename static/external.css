@@ -1,0 +1,477 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #FFFFFF;
+    position: relative;
+    font-family: Arial, Calibri;
+    min-height: 100vh;
+}
+
+body, a {
+    text-align: center;
+    font-size: 22px;
+    color: #000000;
+}
+
+a {
+    transition-duration: 0.4s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header {
+    background-color: #245286;
+    width: 100%;
+    min-height: 100px;
+}
+
+#content {
+    width: 100%;
+    min-height: 830px;
+    height: auto;
+    padding-bottom: 150px;
+}
+
+footer {
+    position: absolute;
+    background-color: #245286;
+    width: 100%;
+    min-height: 150px;
+    padding: 32px;
+    bottom: 0;
+}
+
+#logo:hover {
+    opacity: 0.7;
+}
+
+.action {
+    background-color: #245286;
+    display: block;
+    padding: 8px 24px;
+    margin: 25px 5px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+.action:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+#footer, #footer a {
+    font-size: 18px;
+    line-height: 1.6em;
+    color: #FFFFFF;
+}
+
+#footer a:hover {
+    color: #6696CF;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1280px;
+}
+
+#title {
+    background-color: #FFFFFF;
+    padding: 75px;
+}
+
+#navigation {
+    display: table;
+    border: 2px #000000;
+    border-style: solid none;
+}
+
+#navigation a {
+    display: table-cell;
+    padding: 20px;
+    width: 20%;
+    font-weight: 700;
+}
+
+#navigation a:hover {
+    background-color: #245286;
+    color: #FFFFFF;
+}
+
+.selected {
+    border-bottom: 4px solid #245286;
+}
+
+#index {
+    display: flex;
+    overflow: hidden;
+}
+
+#index section {
+    display: block;
+    min-height: 100%;
+}
+
+#accounts, #cards {
+    padding: 72px 20px 72px 0;
+    min-width: 37%;
+}
+
+#accounts b, #cards b, #account b, #card b {
+    border-bottom: 2px solid #000000;
+}
+
+#account, #card {
+    width: 65%;
+    padding: 0 128px;
+    margin: 72px auto;
+}
+
+#account div, #card div {
+    float: left;
+    width: 50%;
+    font-size: 24px;
+    line-height: 1.4em;
+    padding-top: 21px;
+}
+
+.container {
+    display: block;
+    width: 100%;
+    padding: 32px 0;
+    max-height: 768px;
+    overflow-y: auto;
+}
+
+.object {
+    background-color: #F0F0F0;
+    display: block;
+    clear: both;
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    border: 2px solid #000000;
+    line-height: 1.4em;
+}
+
+.object:hover {
+    background-color: #6696CF;
+}
+
+#actions {
+    background-color: #245286;
+    color: #FFFFFF;
+    padding: 72px 42px;
+    min-width: 26%;
+}
+
+table {
+    width: 100%;
+}
+
+#menu {
+    padding: 15px 0;
+    border: 2px #000000;
+    border-style: solid none;
+}
+
+#menu th {
+    padding-bottom: 5px;
+    width: 20%;
+}
+
+#menu a:hover {
+    color: #245286;
+}
+
+form {
+    background-color: #F0F0F0;
+    border: 2px solid #000000;
+    padding: 42px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form select, form option {
+    width: 100%;
+    padding: 4px 8px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+fieldset {
+    border: none;
+    padding: 24px;
+    margin: 0 auto;
+}
+
+fieldset span {
+    font-size: 18px;
+}
+
+button {
+    border: 1px solid #000000 !important;
+    cursor: pointer;
+    margin: 0 auto !important;
+}
+
+#form {
+    min-width: 40%;
+    width: 65%;
+    padding: 72px 20px 72px 0;
+}
+
+#transactions {
+    background-color: #FFFFFF;
+    border: none;
+    width: 100%;
+    padding: 72px 0;
+}
+
+#transactions table {
+    border-collapse: collapse;
+}
+
+#transactions tr {
+    height: 50px;
+}
+
+#transactions th, #transactions td {
+    padding: 0px 10px;
+    min-width: 10%;
+}
+
+#transactions label, #transactions input {
+    display: block;
+    float: left;
+    width: auto;
+}
+
+#transactions input {
+    margin: 15px;
+}
+
+.up:after, .down:after {
+    position: relative;
+    display: block;
+    visibility: visible;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    transform: rotate(90deg);
+    font-weight: 700;
+    transition-duration: 0.2s;
+    text-align: center;
+    top: -7px;
+}
+
+.up, .down {
+    visibility: hidden;
+}
+
+.up:hover, .down:hover {
+    color: #245286;
+}
+
+.up:after {
+    content: '<';
+    left: -8px;
+}
+
+.down:after {
+    content: '>';
+    left: -13px;
+}
+
+#machine-col {
+    max-width: 12%;
+    width: 12% !important;
+}
+
+#account-col {
+    max-width: 29%;
+    width: 29% !important;
+}
+
+#type-col {
+    max-width: 12%;
+    width: 12% !important;
+}
+
+#amount-col {
+    max-width: 22%;
+    width: 22% !important;
+}
+
+#date-col {
+    max-width: 25%;
+    width: 25% !important;
+}
+
+#messages {
+    background-color: #B6CCB3;
+    position: absolute;
+    display: block;
+    width: 1250px;
+    height: 75px;
+    padding-top: 19px;
+    margin: 15px;
+    border-top: 10px solid #5DAF6F;
+    box-shadow: 3px 3px 10px #303030;
+}
+
+#welcome {
+    position: relative;
+    width: 1903px;
+    height: 960px;
+    padding: 0;
+    margin: 0 auto;
+    border: none;
+}
+
+#welcome section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#login {
+    display: none;
+}
+
+#login h1 {
+    font-size: 72px;
+}
+
+#login div {
+    background-color: #F0F0F0;
+    min-height: 475px;
+    padding: 40px;
+    margin: 242px 0;
+}
+
+#login fieldset {
+    width: 400px;
+}
+
+#close {
+    position: absolute;
+    left: 1200px;
+    color: #303030;
+    cursor: pointer;
+}
+
+#locations div {
+    pointer-events: none;
+}
+
+#locations input {
+    pointer-events: all;
+}
+
+#locations label {
+    background-color: white;
+    position: relative;
+    top: -15px;
+    opacity: 0;
+    padding: 15px;
+}
+
+#locations input:hover ~ label {
+    opacity: 1;
+}
+
+.radio {
+    width: 13px;
+    height: 13px;
+}
+
+.radio:after, .radio:checked:after {
+    background-color: red;
+    position: relative;
+    display: block;
+    top: -2px;
+    left: -1px;
+    width: 13px;
+    height: 13px;
+    visibility: visible;
+    content: '';
+    border: 1px solid black;
+    border-radius: 13px;
+}
+
+.radio:checked:after {
+    background-color: #245286;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.green {
+	color: green;
+}
+
+.red {
+	color: red;
+}
+
+.gray {
+    background-color: #cccccc;
+}
+
+.white {
+    background-color: #ffffff;
+}
+
+
+
+
+
