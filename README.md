@@ -18,13 +18,13 @@ This software allows admins to
 3. Manage ATM Machines
 
 Starts with a location/machine selection page
-![Welcome page](docs/public/screenshots/welcome_page.png?raw=true)
+![Welcome page](screenshots/welcome_page.png?raw=true)
 
 Once machine is selected, a login prompt will appear
-![Login page](docs/public/screenshots/login_page.png?raw=true)
+![Login page](screenshots/login_page.png?raw=true)
 
 Once logged in, user dashboard page is loaded
-![Dashboard page](docs/public/screenshots/dashboard_page.png?raw=true)
+![Dashboard page](screenshots/dashboard_page.png?raw=true)
 From here you can make transfers, deposits, and withdrawals. You can also view transactions, accounts, and cards. There are quick actions as well.
 
 Transfers page - also shows recent transfers
