@@ -9,11 +9,11 @@ These template files may also use variables to fit the desired page or to presen
 
 This software allow users to
 1. Transfer Cash
-  * Either between own accounts or from user's account to another bank user
-  * Cannot transfer more funds than have
+  a. Either between own accounts or from user's account to another bank user
+  b. Cannot transfer more funds than have
 2. Withdraw Cash
-  * Select from own accounts
-  * Can withdraw more than available in account (like a bank loan)
+  a. Select from own accounts
+  b. Can withdraw more than available in account (like a bank loan)
 3. Deposit Cash
 4. Inquire Balance
 5. View Transaction History
