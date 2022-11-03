@@ -9,31 +9,31 @@ These template files may also use variables to fit the desired page or to presen
 
 This software allow users to
 1. Transfer Cash
-  a. Either between own accounts or from user's account to another bank user
-  b. Cannot transfer more funds than have
+  - Either between own accounts or from user's account to another bank user
+  - Cannot transfer more funds than have
 2. Withdraw Cash
-  a. Select from own accounts
-  b. Can withdraw more than available in account (like a bank loan)
+  - Select from own accounts
+  - Can withdraw more than available in account (like a bank loan)
 3. Deposit Cash
 4. Inquire Balance
 5. View Transaction History
-  * Able to sort transactions by machine, account, type, amount, or date
+  - Able to sort transactions by machine, account, type, amount, or date
 6. Change Card PIN
 
 This software allows admins to
 1. Manage ATM Cards
-  * Activate/deactivate
-  * Create/delete
-  * Change other details
+  - Activate/deactivate
+  - Create/delete
+  - Change other details
 2. Manage Accounts
-  * Create/delete
-  * Assign/deassign cards
-  * Change other details
+  - Create/delete
+  - Assign/deassign cards
+  - Change other details
 3. Manage ATM Machines
-  * Activate/deactivate
-  * Create/delete
-  * Update balance
-  * Set minimum balance
+  - Activate/deactivate
+  - Create/delete
+  - Update balance
+  - Set minimum balance
 
 ## Emulation
 Starts with a location/machine selection page
