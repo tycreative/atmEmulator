@@ -1,9 +1,12 @@
 # atmEmulator
-!!! - This software is slightly old and may no longer work with modern versions of Python and Django framework - !!!
+This software is slightly old and may no longer work with modern versions of Python and Django framework.
 You might need to test out different versions of Python and Django to see which will run it and make sure to follow Django initialization steps.
 
 ## About
 ATM emulator made using Python and Django framework. Designed to emulate how an actual ATM (Automatic Teller Machine) works.
+Pages are constructed when loaded using multiple template files so raw html files may look incomplete.
+These template files may also use variables to fit the desired page or to present the data available consistently.
+
 This software allow users to
 1. Transfer Cash
 2. Withdraw Cash
