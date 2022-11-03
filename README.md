@@ -20,6 +20,7 @@ This software allows admins to
 2. Manage Accounts
 3. Manage ATM Machines
 
+## Emulation
 Starts with a location/machine selection page
 ![Welcome page](screenshots/welcome_page.png?raw=true)
 
