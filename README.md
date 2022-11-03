@@ -28,34 +28,34 @@ Once logged in, user dashboard page is loaded
 From here you can make transfers, deposits, and withdrawals. You can also view transactions, accounts, and cards. There are quick actions as well.
 
 Transfers page - also shows recent transfers
-![Transfers page](docs/public/screenshots/transfers_page.png?raw=true)
+![Transfers page](screenshots/transfers_page.png?raw=true)
 
 Start new transfer page
-![New transfer page](docs/public/screenshots/new_transfer_page.png?raw=true)
+![New transfer page](screenshots/new_transfer_page.png?raw=true)
 
 Deposits page - also shows recent deposits
-![Deposits page](docs/public/screenshots/deposits_page.png?raw=true)
+![Deposits page](screenshots/deposits_page.png?raw=true)
 
 Start new deposit page
-![New deposit page](docs/public/screenshots/new_deposit_page.png?raw=true)
+![New deposit page](screenshots/new_deposit_page.png?raw=true)
 
 Withdrawals page - also shows recent withdrawals
-![Withdrawals page](docs/public/screenshots/withdrawals_page.png?raw=true)
+![Withdrawals page](screenshots/withdrawals_page.png?raw=true)
 
 Start new withdrawal page
-![New withdrawal page](docs/public/screenshots/new_withdrawal_page.png?raw=true)
+![New withdrawal page](screenshots/new_withdrawal_page.png?raw=true)
 
 Transactions history page - sortable by column
-![Transactions page](docs/public/screenshots/transactions_page.png?raw=true)
+![Transactions page](screenshots/transactions_page.png?raw=true)
 
 Account details page - quick actions available as well
-![Account details page](docs/public/screenshots/account_details_page.png?raw=true)
+![Account details page](screenshots/account_details_page.png?raw=true)
 
 Card details page - quick actions available as well
-![Card details page](docs/public/screenshots/card_details_page.png?raw=true)
+![Card details page](screenshots/card_details_page.png?raw=true)
 
 Changing account phone number
-![Change phone number page](docs/public/screenshots/change_phone_number_page.png?raw=true)
+![Change phone number page](screenshots/change_phone_number_page.png?raw=true)
 
 Changing card PIN
-![Change pin page](docs/public/screenshots/change_pin_page.png?raw=true)
+![Change pin page](screenshots/change_pin_page.png?raw=true)
